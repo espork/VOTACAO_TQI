@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>VOTACAO_TQI</display-name>
+  
+  <servlet>
+  
+        <servlet-name>SimpleCaptcha</servlet-name>
+        <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+        
+        <init-param>
+            <param-name>width</param-name>
+            <param-value>250</param-value>
+        </init-param>
+        <init-param>
+            <param-name>height</param-name>
+            <param-value>75</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SimpleCaptcha</servlet-name>
+        <url-pattern>/simpleCaptcha.jpg</url-pattern>
+    </servlet-mapping>
+  	
+  	
+  	<context-param>  
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>  
+        <param-value>messages</param-value>  
+    </context-param> 
+    
+    <context-param>  
+        <param-name>br.com.caelum.vraptor.encoding</param-name>  
+        <param-value>UTF-8</param-value>  
+    </context-param>
+    
+    <context-param>  
+        <param-name>MIN_VOTE</param-name>  
+        <param-value>5</param-value>  
+    </context-param>    
+  
+  
+  
+  <filter>
+    <filter-name>vraptor</filter-name>
+    <filter-class>br.com.caelum.vraptor.VRaptor</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>vraptor</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+</web-app>

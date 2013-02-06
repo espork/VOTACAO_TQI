@@ -11,6 +11,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title><fmt:message key="title" /></title>
 		<link rel="stylesheet" type="text/css" href="${THEME_DIR}/bootstrap.min.css"/>	
+		<link rel="stylesheet" type="text/css" href="${THEME_DIR}/language.css"/>	
 		
 	</head>
 	
@@ -20,8 +21,12 @@
       <div class="navbar-inner">
         <div class="container">
           
-          <a href="#" class="brand"><img src="${IMG_DIR}/mascote.jpg" class="img-rounded"/></a>
+          <a href="${pageContext.request.contextPath}" class="brand"><img src="${IMG_DIR}/mascote.jpg" class="img-rounded"/></a>
           <p style="font-size: 26px;line-height: 90px;" ><fmt:message key="title" /></p>
+          <div id="idiomas">
+                <a id="en_us" href="?language=en"></a>                
+            	<a id="pt_br" href="?language=pt_br"></a>
+          </div>
 			
         </div>
       </div>

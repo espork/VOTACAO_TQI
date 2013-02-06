@@ -1,0 +1,24 @@
+#idiomas {
+    left: 952px;
+    position: absolute;
+    top: 85px;
+    width: 164px;
+}
+
+#idiomas a {
+    background: url("../img/flags.png") repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 19px;
+    margin: 0 2px;
+    text-decoration: none;
+    width: 24px;
+}
+
+#idiomas a#pt_br {
+    background-position: 0 0;
+}
+
+#idiomas a#en_us {
+    background-position: -29px 0;
+}

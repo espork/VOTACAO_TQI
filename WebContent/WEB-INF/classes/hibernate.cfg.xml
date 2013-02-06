@@ -11,7 +11,7 @@
 		<property name="hibernate.connection.password">
 		</property>
 		<property name="hibernate.connection.url">
-		jdbc:mysql://localhost/votacao_tqi
+		jdbc:mysql://localhost/teste_tqi
 		</property>
 		<property name="hibernate.connection.driver_class">
 			com.mysql.jdbc.Driver

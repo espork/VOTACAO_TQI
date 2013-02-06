@@ -57,6 +57,7 @@ public class OpinionController {
 		
 		result.forwardTo(ResultController.class).index();
 		
+		
 	}
 	
 	
